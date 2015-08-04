@@ -20,12 +20,6 @@
     "arangodb": "2.6"
   },
   "setup": "scripts/setup.js",
-  "controllers": {
-    "/": "controller.js"
-  },
-  "exports": {
-    "apiKeys": "exports.js"
-  },
   "files": {
     "/index.html": "build/index.html",
     "/app.js": "build/app.js",
