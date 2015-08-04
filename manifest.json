@@ -19,9 +19,6 @@
   "engines": {
     "arangodb": "2.7"
   },
-  "scripts": {
-    "setup": "scripts/setup.js"
-  },
   "files": {
     "/index.html": "build/index.html",
     "/app.js": "build/app.js",
