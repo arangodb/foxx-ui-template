@@ -17,9 +17,11 @@
     "ui-template"
   ],
   "engines": {
-    "arangodb": "2.6"
+    "arangodb": "2.7"
   },
-  "setup": "scripts/setup.js",
+  "scripts": {
+    "setup": "scripts/setup.js"
+  },
   "files": {
     "/index.html": "build/index.html",
     "/app.js": "build/app.js",
