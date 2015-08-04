@@ -24,7 +24,7 @@
     "/index.html": "build/index.html",
     "/app.js": "build/app.js",
     "/style.css": "build/style.css",
-    "/fonts": "fonts"
+    "/fonts": "frontend/fonts"
   },
   "defaultDocument": "index.html"
 }
