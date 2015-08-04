@@ -2702,6 +2702,10 @@ body {
 
 nav {
   top: 0; }
+  nav img {
+    height: 33px;
+    margin-left: 10px;
+    float: left; }
   nav li.selected, nav li:hover {
     background: #fafffa;
     color: #000; }

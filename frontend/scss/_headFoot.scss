@@ -23,6 +23,12 @@ body {
 nav {
   @extend %bar;
 
+  img {
+    height: 33px;
+    margin-left: 10px;
+    float: left;
+  }
+
   top: 0;
 
   li {
