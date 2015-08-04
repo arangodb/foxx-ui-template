@@ -1,5 +1,6 @@
 {
   "name": "ui-template",
+  "thumbnail": "thumbnail.png",
   "version": "1.0.0",
   "description": "A minimalistic ui template for ArangoDB for foxx using pure css.",
   "repository": {
