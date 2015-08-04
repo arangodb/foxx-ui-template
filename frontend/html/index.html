@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Foxx Api Key Manager</title>
+    <meta name="description" content="Foxx Api Key Manager">
+    <meta name="author" content="Michael Hackstein">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-app="keyManager" ng-controller="manager">
+    <nav>
+    <div class="pure-menu pure-menu-horizontal">
+      <a href="#" class="pure-menu-heading">Foxx api-keys demo</a>
+      <ul class="pure-menu-list">
+        <li ng-click="showKeys()" ng-class="{selected: tab === 'keys'}" class="pure-menu-item"><a href="#" class="pure-menu-link">Keys</a></li>
+        <li ng-click="showPlans()" ng-class="{selected: tab === 'plans'}" class="pure-menu-item"><a href="#" class="pure-menu-link">Plans</a></li>
+      </ul>
+    </div>
+    </nav>
+    <!--<button class="pure-button" ng-click="showKeys()" ng-class="{selected: tab === 'keys'}">Keys</button>
+      <button class="pure-button" ng-click="showPlans()" ng-class="{selected: tab === 'plans'}">Plans</button>-->
+    <section class="error" ng-show="error">
+      {{ error }}
+    </section>
+    <section class="success" ng-show="success">
+      {{ success }}
+    </section>
+    <section class="content">
+      <div ng-switch="view">
+        <div ng-switch-when="plans">
+          <h2>Available Plans</h2>
+          <h2><button class="pure-button success" ng-click="showNewPlan()">Add Plan</button></h2>
+          <table class="pure-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tr ng-repeat="plan in planList" ng-click="showDetails(plan.key)">
+              <td>{{plan.key}}</td>
+              <td>{{plan.name}}</td>
+              <td>
+                <button class="pure-button success" ng-click="createNewKey(plan.key);$event.stopPropagation()">New Key</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div ng-switch-when="keys">
+          <h2>Available Api Keys</h2>
+          <table class="pure-table">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Plan</th>
+                <th>Active</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tr ng-repeat="key in keyList">
+              <td>{{key.key}}</td>
+              <td>{{planMap[key.plan]}}</td>
+              <td>{{key.active}}</td>
+              <td>
+                <button class="pure-button neutral" ng-click="showSelectPlan(key)">Change Plan</button>
+                <button class="pure-button danger" ng-click="disableKey(key)" ng-show="key.active">Disable</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div ng-switch-when="selectPlan" style="text-align:center;">
+          <h2>Select Plan for Api Key:</h2>
+          <h3 style="">{{currentKey.key}}</h3>
+          <a style="margin-left: 5px; margin-right: 5px;" class="pure-button pure-button-primary planlist" ng-repeat="plan in planList" ng-click="changePlan(currentKey.key, plan.key)">{{plan.name}}</a>
+        </div>
+        <div ng-switch-when="planDetails">
+          <h2>Request limits in {{ currentPlan.name }}</h2>
+          <table class="pure-table">
+            <thead>
+              <tr>
+                <th>Bucket</th>
+                <th>Hour</th>
+                <th>Day</th>
+                <th>Month</th>
+              </tr>
+            </thead>
+            <tr ng-repeat="(name,rate) in currentPlan.refills">
+              <td>{{name}}</td>
+              <td>{{rate.hour}}</td>
+              <td>{{rate.day}}</td>
+              <td>{{rate.month}}</td>
+            </tr>
+          </table>
+        </div>
+        <div ng-switch-when="newPlan">
+          <h2>Create a new Plan</h2>
+          <form class="pure-form" name="editPlanForm">
+            <h2><input placeholder="Plan Name" required ng-pattern="/^[a-zA-Z]+$/" ng-model="editPlan.name">
+              <button class="pure-button success" ng-click="addRow()">Add Bucket</button></h2>
+            <table class="pure-table">
+              <thead>
+                <tr>
+                  <th>Bucket</th>
+                  <th>Hour</th>
+                  <th>Day</th>
+                  <th>Month</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tr ng-repeat="bucket in editPlan.buckets" ng-model="editPlan.buckets">
+                <td><input placeholder="Name" ng-model="bucket.name" ng-pattern="/^[a-zA-Z]+$/" required/></td>
+                <td><input placeholder="Hour" ng-model="bucket.hour" ng-pattern="/^((Infinity)|(\d+)|())$/"/></td>
+                <td><input placeholder="Day" ng-model="bucket.day" ng-pattern="/^((Infinity)|(\d+)|())$/"/></td>
+                <td><input placeholder="Month" ng-model="bucket.month" ng-pattern="/^((Infinity)|(\d+)|())$/"/></td>
+                <td><button class="pure-button danger" ng-click="removeRow($index)">Delete</button></td>
+              </tr>
+            </table>
+            <h2>
+              <button class="pure-button success" ng-click="createNewPlan()" ng-disabled="!editPlanForm.$valid">Save</button>
+            </h2>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="pure-g">
+        <div class="pure-u-1-3">
+          <p class="copyright">Copyright (c) ArangoDB GmbH</p>
+        </div>
+        <div class="pure-u-1-3">
+          <p>Foxx Api Key Manager</p>
+        </div>
+        <div class="pure-u-1-3">
+          <p class="version">v 1.0.0</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

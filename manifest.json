@@ -1,0 +1,36 @@
+{
+  "name": "ui-template",
+  "version": "1.0.0",
+  "description": "A minimalistic ui template for ArangoDB for foxx using pure css.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arangodb/foxx-ui-template.git"
+  },
+  "author": "ArangoDB GmbH",
+  "contributors": [
+    {
+      "name": "Heiko Kernbach",
+      "email": "heiko@arangodb.com"
+    }
+  ],
+  "keywords": [
+    "ui-template"
+  ],
+  "engines": {
+    "arangodb": "2.6"
+  },
+  "setup": "scripts/setup.js",
+  "controllers": {
+    "/": "controller.js"
+  },
+  "exports": {
+    "apiKeys": "exports.js"
+  },
+  "files": {
+    "/index.html": "build/index.html",
+    "/app.js": "build/app.js",
+    "/style.css": "build/style.css",
+    "/fonts": "fonts"
+  },
+  "defaultDocument": "index.html"
+}
