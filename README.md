@@ -24,6 +24,7 @@ grunt (or grunt watch)
     ├── fonts                   <- additional fonts
     ├── html                    <- html files
     ├── js                      <- js files
+    ├── images                  <- image files
     └── scss                    <- sass files for css generation
 └── build                       <- location of generated files
 ```
