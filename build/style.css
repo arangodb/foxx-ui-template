@@ -135,7 +135,7 @@ input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-se
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em; }
+  padding: 0.35em 0.625em 0.75em; }
 
 legend {
   border: 0;
@@ -335,7 +335,7 @@ td, th {
 .pure-button {
   font-family: inherit;
   font-size: 100%;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   color: #444;
   color: rgba(0, 0, 0, 0.8);
   border: 1px solid #999;
@@ -357,7 +357,7 @@ td, th {
 
 .pure-button-active, .pure-button:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
-  border-color: #000 \9; }
+  border-color: #000\9; }
 
 .pure-button[disabled], .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active {
   border: 0;
@@ -382,7 +382,7 @@ td, th {
   color: #fff; }
 
 .pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea {
-  padding: .5em .6em;
+  padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 3px #ddd;
@@ -393,7 +393,7 @@ td, th {
   box-sizing: border-box; }
 
 .pure-form input:not([type]) {
-  padding: .5em .6em;
+  padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 3px #ddd;
@@ -403,7 +403,7 @@ td, th {
   box-sizing: border-box; }
 
 .pure-form input[type=color] {
-  padding: .2em .5em; }
+  padding: 0.2em 0.5em; }
 
 .pure-form input[type=text]:focus, .pure-form input[type=password]:focus, .pure-form input[type=email]:focus, .pure-form input[type=url]:focus, .pure-form input[type=date]:focus, .pure-form input[type=month]:focus, .pure-form input[type=time]:focus, .pure-form input[type=datetime]:focus, .pure-form input[type=datetime-local]:focus, .pure-form input[type=week]:focus, .pure-form input[type=number]:focus, .pure-form input[type=search]:focus, .pure-form input[type=tel]:focus, .pure-form input[type=color]:focus, .pure-form select:focus, .pure-form textarea:focus {
   outline: 0;
@@ -452,11 +452,11 @@ td, th {
   height: auto; }
 
 .pure-form label {
-  margin: .5em 0 .2em; }
+  margin: 0.5em 0 0.2em; }
 
 .pure-form fieldset {
   margin: 0;
-  padding: .35em 0 .75em;
+  padding: 0.35em 0 0.75em;
   border: 0; }
 
 .pure-form legend {
@@ -499,7 +499,7 @@ td, th {
 
 .pure-form input.pure-input-rounded, .pure-form .pure-input-rounded {
   border-radius: 2em;
-  padding: .5em 1em; }
+  padding: 0.5em 1em; }
 
 .pure-form .pure-group fieldset {
   margin-bottom: 10px; }
@@ -578,7 +578,7 @@ td, th {
   .pure-form .pure-help-inline, .pure-form-message-inline, .pure-form-message {
     display: block;
     font-size: .75em;
-    padding: .2em 0 .8em; } }
+    padding: 0.2em 0 0.8em; } }
 
 .pure-menu {
   -webkit-box-sizing: border-box;
@@ -680,7 +680,7 @@ td, th {
 .pure-menu-horizontal .pure-menu-separator {
   width: 1px;
   height: 1.3em;
-  margin: 0 .3em; }
+  margin: 0 0.3em; }
 
 .pure-menu-heading {
   text-transform: uppercase;
@@ -693,7 +693,7 @@ td, th {
   background-color: #fff; }
 
 .pure-menu-link, .pure-menu-disabled, .pure-menu-heading {
-  padding: .5em 1em; }
+  padding: 0.5em 1em; }
 
 .pure-menu-disabled {
   opacity: .5; }
@@ -715,7 +715,7 @@ td, th {
 
 .pure-table caption {
   color: #000;
-  font: italic 85%/1 arial, sans-serif;
+  font: italic 85%/1 arial,sans-serif;
   padding: 1em 0;
   text-align: center; }
 
@@ -725,7 +725,7 @@ td, th {
   font-size: inherit;
   margin: 0;
   overflow: visible;
-  padding: .5em 1em; }
+  padding: 0.5em 1em; }
 
 .pure-table td:first-child, .pure-table th:first-child {
   border-left-width: 0; }
@@ -765,8 +765,8 @@ td, th {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot');
-  src: url('fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2') format('woff2'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg') format('svg');
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2") format("woff2"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"), url("fonts/fontawesome-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -818,8 +818,8 @@ td, th {
   left: -1.85714286em; }
 
 .fa-border {
-  padding: .2em .25em .15em;
-  border: solid .08em #eee;
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eee;
   border-radius: .1em; }
 
 .fa-pull-left {
@@ -858,7 +858,6 @@ td, th {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
@@ -867,7 +866,6 @@ td, th {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
@@ -2706,7 +2704,8 @@ nav {
     height: 33px;
     margin-left: 10px;
     float: left; }
-  nav li.selected, nav li:hover {
+  nav li.selected,
+  nav li:hover {
     background: #fafffa;
     color: #000; }
 
@@ -2716,7 +2715,10 @@ footer {
     margin-top: 8px;
     margin-bottom: 8px; }
 
-.button-success, .button-error, .button-warning, .button-secondary {
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
   color: white;
   border-radius: 3px; }
 
