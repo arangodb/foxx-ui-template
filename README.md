@@ -11,9 +11,7 @@ Font-Awesome included:
 You need grunt to see your possible modifications. Install grunt and grunt-cli using npm. Then install all dependencies. Afterwards you can start generating the files.
 
 ```sh
-npm install -g grunt 
-npm install -g grunt-cli
-npp install 
+npm install 
 grunt (or grunt watch)
 ```
 
